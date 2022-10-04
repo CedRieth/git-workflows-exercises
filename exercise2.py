@@ -5,6 +5,10 @@ from exercise1 import Vector
 class Point2D:
     def __init__(self, x: float, y: float) -> None:
         self._coordinates = Vector([x, y])
+        
+    def __isub__(self, other: Vector) -> Point2D:
+        self._coordinates -= other
+        return self
 
     @property
     def x(self) -> float:
